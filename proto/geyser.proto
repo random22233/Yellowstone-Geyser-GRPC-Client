@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package yellowstone;
+
+service Geyser {
+  // Subscribe to block updates
+  rpc BlockSubscribe(BlockSubscribeRequest) returns (stream BlockSubscribeResponse);
+  
+  // Subscribe to account updates
+  rpc AccountSubscribe(AccountSubscribeRequest) returns (stream AccountSubscribeResponse);
+  
+  // Subscribe to transaction updates
+  rpc TransactionSubscribe(TransactionSubscribeRequest) returns (stream TransactionSubscribeResponse);
+  
+  // Subscribe to slot updates
+  rpc SlotSubscribe(SlotSubscribeRequest) returns (stream SlotSubscribeResponse);
+}
+
+// Block subscription
+message BlockSubscribeRequest {
+  optional UpdateFilter filter = 1;
+}
