@@ -1,0 +1,16 @@
+api_key: "b2b972c6-fff2-4b5c-aac9-375c6984b80e"  # Shyft API key
+grpc_endpoint: "https://grpc.ny.shyft.to"  # gRPC endpoint
+
+# Solana configuration
+solana_network: "devnet"  # mainnet-beta, testnet, or devnet
+
+# Wallet configuration
+from_wallet:
+  address: "YourSourceWalletPublicKey"  # Public key of source wallet
+  keypair_path: "/path/to/source_wallet_keypair.json"  # Path to keypair file
+
+to_wallet:
+  address: "YourDestinationWalletPublicKey"  # Public key of destination wallet
+
+# Transaction settings
+sol_amount: 0.001  # Amount o
